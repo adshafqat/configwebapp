@@ -1,4 +1,4 @@
-package zaynsolutions.com.upwork;
+package com.zaynsolutions.config;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,10 +10,10 @@ import java.lang.Math;
 import java.util.concurrent.*;
 import org.springframework.beans.factory.annotation.Value;
 
-	@Value("${url}")
+  @Value("${url}")
   private String url; 
 
-	@Value("${port}")
+  @Value("${port}")
   private String port; 
 
 @RestController
