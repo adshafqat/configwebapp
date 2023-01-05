@@ -8,6 +8,7 @@ public class ConfigApplication {
 
 
 	public static void main(String[] args) {
+		System.out.println("This is a dummy project.");		
 		SpringApplication.run(ConfigApplication.class, args);
 	}
 
