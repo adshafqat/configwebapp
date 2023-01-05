@@ -10,14 +10,16 @@ import java.lang.Math;
 import java.util.concurrent.*;
 import org.springframework.beans.factory.annotation.Value;
 
+
+@RestController
+public class ConfigController {
+	
   @Value("${url}")
   private String url; 
 
   @Value("${port}")
   private String port; 
 
-@RestController
-public class ConfigController {
 	@GetMapping("/")
 	public String returnResponse() {
 		System.out.println("This is a dummy project. URL:"+url);		
