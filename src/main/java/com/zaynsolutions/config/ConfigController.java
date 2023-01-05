@@ -16,6 +16,13 @@ public class ConfigController {
 	
 private BackendProperties backendProperties;
 
+	
+	    @Autowired
+	    public ConfigController(BackendProperties backendProperties) {
+		this.backendProperties = backendProperties;
+	    }
+
+	
 	@GetMapping("/")
 	public String returnResponse() {
 		System.out.println("This is a dummy project. URL:"+backendProperties.getUrl());		
