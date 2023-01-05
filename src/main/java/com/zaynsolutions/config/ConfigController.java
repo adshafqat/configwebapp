@@ -11,19 +11,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class ConfigController {
 
 	@Autowired
-	private BackendProperties backendProperties;
+	private BackendserverProperties BackendserverProperties;
 
 	
 	    @Autowired
-	    public ConfigController(BackendProperties backendProperties) {
-		this.backendProperties = backendProperties;
+	    public ConfigController(BackendserverProperties BackendserverProperties) {
+		this.BackendserverProperties = BackendserverProperties;
 	    }
 
 	
 	@GetMapping("/")
 	public String returnResponse() {
-		System.out.println("This is a dummy project. URL:"+backendProperties.getUrl());		
-		return "This is a test application. URL value is :"+backendProperties.getUrl()+" Port:"+backendProperties.getPort();
+		System.out.println("This is a dummy project. URL:"+BackendserverProperties.getUrl());		
+		return "This is a test application. URL value is :"+BackendserverProperties.getUrl()+" Port:"+BackendserverProperties.getPort();
 	}
 
 
