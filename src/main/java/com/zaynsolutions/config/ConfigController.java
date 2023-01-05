@@ -14,16 +14,12 @@ import org.springframework.beans.factory.annotation.Value;
 @RestController
 public class ConfigController {
 	
-  @Value("${url}")
-  private String url; 
-
-  @Value("${port}")
-  private String port; 
+private BackendProperties backendProperties;
 
 	@GetMapping("/")
 	public String returnResponse() {
-		System.out.println("This is a dummy project. URL:"+url);		
-		return "This is a test application. Date value is :"+url+" Port:"+port;
+		System.out.println("This is a dummy project. URL:"+backendProperties.getUrl());		
+		return "This is a test application. URL value is :"+backendProperties.getUrl()+" Port:"+backendProperties.getPort();
 	}
 
 
