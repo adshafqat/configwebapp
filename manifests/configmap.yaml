@@ -3,6 +3,7 @@ kind: ConfigMap
 metadata:
   name: configwebappcm
 data:
+  transformer.mode: robot
   application.yml: |
     backendserver:
       url: "http://www.yahoo.com"
