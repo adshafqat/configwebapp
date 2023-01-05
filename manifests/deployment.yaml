@@ -48,6 +48,6 @@ spec:
             # Provide the name of the ConfigMap you want to mount.
             name: configwebappcm
             items:
-            - key: "user-interface.properties"
-              path: "user-interface.properties"
+            - key: "application.properties"
+              path: "application.properties"
         ####
