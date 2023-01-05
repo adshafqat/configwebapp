@@ -3,6 +3,7 @@ kind: ConfigMap
 metadata:
   name: configwebappcm
 data:
-  application.properties: |
-    url=http://www.yahoo.com
-    port=8080
+  application.yml: |
+    backendserver:
+      url: "http://www.yahoo.com"
+      port: "8080"
