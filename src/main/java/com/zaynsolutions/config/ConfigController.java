@@ -9,8 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @RestController
 public class ConfigController {
-	
-private BackendProperties backendProperties;
+
+	@Autowired
+	private BackendProperties backendProperties;
 
 	
 	    @Autowired
