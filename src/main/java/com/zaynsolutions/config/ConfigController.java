@@ -17,11 +17,11 @@ import org.springframework.beans.factory.annotation.Value;
   private String port; 
 
 @RestController
-public class UpworkController {
+public class ConfigController {
 	@GetMapping("/")
 	public String returnResponse() {
-		System.out.println("This is a dummy project. Date:"+url);		
-		return "This is a test application. Random number value is :"+url+" DateTime:"+port;
+		System.out.println("This is a dummy project. URL:"+url);		
+		return "This is a test application. Date value is :"+url+" Port:"+port;
 	}
 
 
