@@ -37,17 +37,16 @@ spec:
               memory: 512Mi
           # This section is only required if you are attaching a volume like a config map or secret to your application
           volumeMounts:
-          - mountPath: /etc/config
-            name: config
-            readOnly: true
+            - name: config
+              readOnly: true
+              mountPath: /etc/config
           ####
       # This section is only required if you are attaching a volume like a config map or a secret to your application
       volumes:
         - name: config
           configMap:
-            # Provide the name of the ConfigMap you want to mount.
             name: configwebappcm
             items:
-            - key: "application.properties"
-              path: "application.properties"
+              - key: application.yml
+                path: application.yml
         ####
