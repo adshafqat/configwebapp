@@ -3,13 +3,9 @@ package com.zaynsolutions.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
 
 @Component
-@Configuration
-@EnableConfigurationProperties
-@ConfigurationProperties("backendserver")
+@ConfigurationProperties(prefix="backendserver")
 public class BackendserverProperties {
 
     private String url;

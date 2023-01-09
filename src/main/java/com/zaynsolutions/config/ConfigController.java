@@ -2,8 +2,6 @@ package com.zaynsolutions.config;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.http.ResponseEntity;
-import org.springframework.http.HttpStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
@@ -11,21 +9,15 @@ import org.springframework.beans.factory.annotation.Value;
 public class ConfigController {
 
 	@Autowired
-	private BackendserverProperties BackendserverProperties;
-
+	private BackendserverProperties backendserverProperties;
 	
-	    @Autowired
-	    public ConfigController(BackendserverProperties BackendserverProperties) {
-		this.BackendserverProperties = BackendserverProperties;
-	    }
-
-	@Value("${transformer.mode}")
+	@Value("${testurl}")
    	private String urlvalue;
 	
 	@GetMapping("/")
 	public String returnResponse() {
-		System.out.println("This is a dummy project. URL:"+urlvalue+" URL:"+BackendserverProperties.getUrl());		
-		return "This is a test application. URL value is :"+BackendserverProperties.getUrl()+" Port:"+BackendserverProperties.getPort();
+		System.out.println("This is a test application. URL1:"+urlvalue+" URL2:"+backendserverProperties.getUrl());		
+		return "This is a test application. URL1:"+urlvalue+". URL2 value is :"+backendserverProperties.getUrl()+" Port:"+backendserverProperties.getPort();
 	}
 
 

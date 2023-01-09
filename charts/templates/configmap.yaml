@@ -3,8 +3,8 @@ kind: ConfigMap
 metadata:
   name: configwebappcm
 data:
-  transformer.mode: robot
   application.yml: |
+    testurl: http://localhost
     backendserver:
       url: "http://www.yahoo.com"
       port: "8080"

@@ -17,8 +17,8 @@ spec:
       containers:
         - name: configwebapp
           image: docker.io/ashafqat/configimage:v1.0
-          # image: devadeelregistry.azurecr.io/adshafqatupwork:8        
           imagePullPolicy: IfNotPresent
+          #imagePullPolicy: Never
           ports:
             - name: http
               containerPort: 8080
@@ -39,7 +39,7 @@ spec:
           volumeMounts:
             - name: config
               readOnly: true
-              mountPath: /etc/config
+              mountPath: /config
           ####
       # This section is only required if you are attaching a volume like a config map or a secret to your application
       volumes:

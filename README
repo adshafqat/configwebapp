@@ -1,0 +1,41 @@
+Spring Boot apps browse the config folder for configuration files by default
+The config map should be mounted to /config folder
+
+          volumeMounts:
+            - name: config
+              readOnly: true
+              mountPath: /config
+
+-----------------------------------------
+
+Maven Build
+mvn clean package
+
+-----------------------------------------
+
+HELM Install and Uninstall
+cd charts
+helm install configwebapp .
+helm uninstall configwebapp
+
+-----------------------------------------
+
+Docker Image Creation from dockerfile
+eval $(minikube docker-env)
+docker images
+docker build -t docker.io/ashafqat/configimage:v1.0 .
+If you want want deployment to read local image. Set image pull policy to Never
+
+          image: docker.io/ashafqat/configimage:v1.0
+          #imagePullPolicy: IfNotPresent
+          imagePullPolicy: Never
+To push image to docker hub
+docker login
+ashafqat
+docker push docker.io/ashafqat/configimage:v1.0
+
+-----------------------------------------
+
+Kubectl commands
+kubectl get pods
+kubectl exec configwebapp-695b876bc-cdx4q -- curl http://localhost:8080
