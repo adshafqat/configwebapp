@@ -44,3 +44,4 @@ kubectl exec configwebapp-695b876bc-cdx4q -- curl http://localhost:8080
 
 OpenShift Sandbox URL
 https://console-openshift-console.apps.sandbox.x8i5.p1.openshiftapps.com/
+adeel.shafqat
