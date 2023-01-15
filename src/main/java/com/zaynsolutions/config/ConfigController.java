@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 @RestController
 public class ConfigController {
 
+
 	@Autowired
 	private BackendserverProperties backendserverProperties;
 	
